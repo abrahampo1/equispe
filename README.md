@@ -2,7 +2,7 @@
 
 <img src=https://i.imgur.com/Sw5Y6Lz.png alt="logo" width=100 height=100 />
 
-<h1>Discord XP Bot</h1>
+<h1>Equispe</h1>
 <p>Dead-simple discord XP bot</p>
 
 <img src="https://img.shields.io/badge/Maintained-Yes-indigo" />
