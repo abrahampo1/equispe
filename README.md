@@ -10,7 +10,7 @@
 <img src=https://img.shields.io/github/stars/Team-Lypus/Equispe.svg />
 <img src=https://img.shields.io/github/issues/Team-Lypus/Equispe />
 <img src=https://img.shields.io/github/last-commit/Team-Lypus/Equispe />
-<h4> <a href=https://discord.com/api/oauth2/authorize?client_id=1115770394096455712&permissions=268438528&scope=bot>View Demo</a> <span> · </span> <a href="https://github.com/Team-Lypus/Equispe/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/Team-Lypus/Equispe/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/Team-Lypus/Equispe/issues"> Request Feature </a> </h4>
+<h4> <a href=https://discord.com/api/oauth2/authorize?client_id=1115770394096455712&permissions=268438528&scope=bot>Add to your server</a> <span> · </span> <a href="https://github.com/Team-Lypus/Equispe/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/Team-Lypus/Equispe/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/Team-Lypus/Equispe/issues"> Request Feature </a> </h4>
 
 
 </div>
