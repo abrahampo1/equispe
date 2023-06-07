@@ -4,7 +4,7 @@ const pool = require("../database");
 module.exports = async function xp(command) {
   const userID = command.member.id;
   const user = await pool.query(
-    `SELECT * FROM users WHERE userid = '${userID}'`
+    `SELECT * FROM users WHERE userid = '${userID}' and guild = ${command.member.guild.id}`
   );
 
   let xp = 0;

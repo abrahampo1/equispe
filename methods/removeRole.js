@@ -2,7 +2,7 @@ const pool = require("../database");
 
 module.exports = async function removeRole(command) {
   const role = command.options.get("role");
-  const roles = await pool.query("SELECT roleid FROM roles");
+  const roles = await pool.query(`SELECT roleid FROM roles WHERE guild = ${command.member.guild.id}`);
 
   let response = []
 

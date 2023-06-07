@@ -12,7 +12,7 @@ async function messageCreate(message) {
   let total_xp = 0;
   let id = "nextval('users_id_seq'::regclass)";
   const data = await pool.query(
-    `SELECT * FROM public.users WHERE userid = '${author}'`
+    `SELECT * FROM public.users WHERE userid = '${author}' and guild = ${message.author.guild.id}`
   );
   if (data.rows.length == 0) {
     total_xp = xp;
@@ -29,7 +29,7 @@ async function messageCreate(message) {
   );
 
   const rol_query = await pool.query(
-    `SELECT * FROM roles WHERE xp <= ${total_xp} ORDER BY xp DESC`
+    `SELECT * FROM roles WHERE xp <= ${total_xp} and guild = ${message.author.guild.id} ORDER BY xp DESC`
   );
 
   if (rol_query.rows.length == 0) {
