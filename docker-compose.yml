@@ -1,23 +1,21 @@
 version: '3.8'
 services:
-  app:
-    build: .
+  equispe:
+    build: https://github.com/Team-Lypus/Equispe.git
+    image: equispe
     depends_on:
       - postgres
-    env_file: 
-    - .env
+    environment:
+      - TOKEN=YOUR DISCORD BOT TOKEN
+      - CLIENT_ID=YOUR DISCORD APPLICATION ID
+      - PG_USER=postgres
+      - PG_PASSWORD=postgres
+      - PG_DATABASE=root
+      - PG_HOST=postgres
+      - PG_PORT=5432
     volumes:
-      # Maps our current project directory `.` to
-      # our working directory in the container
       - ./:/usr/src/app/
-      # node_modules workaround for volumes
-      # https://stackoverflow.com/a/32785014
       - /usr/src/app/node_modules
-
-  # This is the configuration for our PostgreSQL database container
-  # Note the `postgres` name is important, in out Node app when we refer
-  # to  `host: "postgres"` that value is mapped on the network to the 
-  # address of this container.
   postgres:
     image: postgres:14.1-alpine
     restart: always
@@ -26,7 +24,4 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=root
     volumes:
-      # When the PostgresSQL container is started it will run any scripts
-      # provided in the `docker-entrypoint-initdb.d` directory, this connects
-      # our seed file to that directory so that it gets run
       - ./database-seed.sql:/docker-entrypoint-initdb.d/database-seed.sql
