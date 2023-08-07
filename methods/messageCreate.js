@@ -9,7 +9,7 @@ async function messageCreate(message) {
   const guild = message.guildId;
   const author = message.author.id;
   const time = message.createdTimestamp;
-  const xp = message.content.length;
+  const xp = Math.min(message.content.length, 30);
   let total_xp = 0;
   let id = "nextval('users_id_seq'::regclass)";
   const data = await pool.query(
